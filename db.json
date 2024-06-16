@@ -1,0 +1,70 @@
+{
+    "carousel": [
+        {
+            "name": "carousel1",
+            "src": "./images/carousel/Carousel1.png"
+        },
+        {
+            "name": "carousel1",
+            "src": "./images/carousel/Carousel1.png"
+        },
+        {
+            "name": "carousel1",
+            "src": "./images/carousel/Carousel1.png"
+        }
+    ],
+    "onTheaterMovies": [
+        {
+            "title": "The watcher",
+            "description":"Một nghệ sĩ trẻ bị mắc kẹt trong một khu rừng rộng lớn, nguyên sơ ở phía tây Ireland, sau khi tìm được nơi trú ẩn, cô bị mắc kẹt cùng với ba người lạ, bị những sinh vật bí ẩn rình rập mỗi đêm.",
+            "ageUnder":"T16",
+            "type":"2D",
+            "director":"Ishana Shyamalan",
+            "category": "Fantasy",
+            "startDate": "14/06/2024",
+            "time" : "120",
+            "language": "sub",
+            "img":"./images/movies/TheWatcher.png",
+            "prioritize":true
+        },
+        {
+            "title": "The watcher",
+            "description":"Một nghệ sĩ trẻ bị mắc kẹt trong một khu rừng rộng lớn, nguyên sơ ở phía tây Ireland, sau khi tìm được nơi trú ẩn, cô bị mắc kẹt cùng với ba người lạ, bị những sinh vật bí ẩn rình rập mỗi đêm.",
+            "ageUnder":"T16",
+            "type":"2D",
+            "director":"Ishana Shyamalan",
+            "category": "Fantasy",
+            "startDate": "14/06/2024",
+            "time" : "120",
+            "language": "sub",
+            "img":"./images/movies/TheWatcher.png",
+            "prioritize":true
+        },
+        {
+            "title": "The watcher",
+            "description":"Một nghệ sĩ trẻ bị mắc kẹt trong một khu rừng rộng lớn, nguyên sơ ở phía tây Ireland, sau khi tìm được nơi trú ẩn, cô bị mắc kẹt cùng với ba người lạ, bị những sinh vật bí ẩn rình rập mỗi đêm.",
+            "ageUnder":"T16",
+            "type":"2D",
+            "director":"Ishana Shyamalan",
+            "category": "Fantasy",
+            "startDate": "14/06/2024",
+            "time" : "120",
+            "language": "sub",
+            "img":"./images/movies/TheWatcher.png",
+            "prioritize":true
+        },
+        {
+            "title": "The watcher",
+            "description":"Một nghệ sĩ trẻ bị mắc kẹt trong một khu rừng rộng lớn, nguyên sơ ở phía tây Ireland, sau khi tìm được nơi trú ẩn, cô bị mắc kẹt cùng với ba người lạ, bị những sinh vật bí ẩn rình rập mỗi đêm.",
+            "ageUnder":"T16",
+            "type":"2D",
+            "director":"Ishana Shyamalan",
+            "category": "Fantasy",
+            "startDate": "14/06/2024",
+            "time" : "120",
+            "language": "sub",
+            "img":"./images/movies/TheWatcher.png",
+            "prioritize":true
+        }
+    ]
+}
