@@ -5,10 +5,10 @@ import '../../css/navbar/NavBar.css'
 const NavBar = () => {
    
     return (
-        <Container fluid className= "bg-dark position-fixed top-0">
+        <Container fluid className= "container-all bg-dark nav-top">
             <Container>
                 <Navbar bg="dark" variant="dark" expand="lg">
-                    <Navbar.Brand href="#home">
+                    <Navbar.Brand href="/">
                         <img width="100"
                             height="100"
                             className="d-inline-block align-top" src="./images/logo2.png" alt="logo" />
