@@ -1,3 +1,7 @@
+.fix-nav{
+    margin-top: 180px;
+}
+
 .transparent-button {
     background-color: transparent;
     border: 1px solid #198754 ;
@@ -11,13 +15,4 @@
 .transparent-button:hover {
     background-color:  #198754;
     border: none;
-}
-
-.container-all{
-    z-index: 999;
-}
-
-.nav-top{
-    position: sticky;
-    top:0
 }

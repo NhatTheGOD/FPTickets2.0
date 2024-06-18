@@ -6,7 +6,7 @@ const Footer = () => {
             <Container style={{color:'white'}}>
             <Row>
                 <Col sm={1}>
-                    <img style={{width : '100%'}} src="./images/logo2.png"/>
+                    <img alt="pic" style={{width : '100%'}} src="./images/logo2.png"/>
                 </Col>
                 <Col sm={11}>
                 <p><strong>FPT University - HoaLac -Fer202</strong></p>
