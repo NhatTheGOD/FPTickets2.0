@@ -5,9 +5,10 @@ import '../css/NotFound/NotFound.css'
 
 const NotFound = () => {
   return (
-    <Container fluid className='fix-nav bg-dark fix-nav'>
-      <h1 className='text-center'>404 - Not Found</h1>
-      <p className='text-center'>The page you are looking for does not exist.</p>
+    <Container fluid className='p-4 text-center text-white bg-dark'>
+      <img style={{width: "50%"}} src='./images/error.png'/>
+      <p>Xin lỗi, trang này không tồn tại!</p>
+      <p>Không có nội dung ở trang này. Vui lòng thử lại ở đường link khác!</p>
     </Container>
   );
 };

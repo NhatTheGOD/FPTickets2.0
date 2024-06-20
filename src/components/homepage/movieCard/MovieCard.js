@@ -4,6 +4,9 @@ import { FaTicket } from "react-icons/fa6";
 import { FaInfo } from "react-icons/fa";
 import { useState } from "react";
 import ModalMovies from "../movieDetailModal/ModalMovies";
+import Flickity from 'react-flickity-component';
+import 'flickity/css/flickity.css';
+
 
 const MovieCard = ({ movies, title }) => {
     const [modalShow, setModalShow] = useState(false);
@@ -14,6 +17,12 @@ const MovieCard = ({ movies, title }) => {
             return title.substring(0, 7) + '...';
         }
         return title;
+    };
+
+    const flickityOptions = {
+        initialIndex: 2,
+        autoPlay: 1500,
+        wrapAround: true,
     };
 
     const typefilter = (type) => {
@@ -29,46 +38,59 @@ const MovieCard = ({ movies, title }) => {
         }
     }
 
-    const handleSelectmovie = (movie) =>{
-       setSelectedMovies(movie)
-       setModalShow(true) 
+    const handleSelectmovie = (movie) => {
+        setSelectedMovies(movie)
+        setModalShow(true)
     }
 
     return (
         <Container style={{ borderBottom: "1px solid grey" }} fluid className="p-4 bg-dark">
             <Container>
                 <h2 className="p-4 text-white text-center">{title}</h2>
-                <Row>
-                    {movies.map((o, index) => (
-                        <Col xl={3} md={6} sm={12} key={index} className="p-4">
-                            <Card>
-                                <Card.Img variant="top" src={o.img} />
-                                <Card.Body>
-                                    <Card.Title>
-                                        <Button size="sm" className="m-1" variant={typefilter(o.ageUnder)}>{o.ageUnder}</Button>
-                                        <Button size="sm" className="transparent-button m-1">{o.language}</Button>
-                                        <Button size="sm" className="m-1" variant="success">{o.type}</Button>
-                                    </Card.Title>
-                                    <Card.Text>
-                                        <h3>{shortenTitle(o.title)}</h3>
-                                        <p>Type : {o.category}</p>
-                                    </Card.Text>
-                                    <Button onClick={() => handleSelectmovie(o)} variant="success">
-                                        <FaTicket /> Buy ticket
+                <Flickity
+                    className={'carousel'}
+                    elementType={'div'}
+                    options={flickityOptions}
+                    disableImagesLoaded={false} // default false
+                    reloadOnUpdate // default false
+                    static
+                >
+                    {movies.map((o) => (
+                        <Card className="custom-card bg-dark border-0">
+                            <Card.Img variant="top" src={o.img} />
+                            <Card.Body>
+                                <Card.Title>
+                                    <Button size="sm" className="m-1" variant={typefilter(o.ageUnder)}>{o.ageUnder}</Button>
+                                    <Button size="sm" className="transparent-button m-1">{o.language}</Button>
+                                    <Button size="sm" className="m-1" variant="success">{o.type}</Button>
+                                </Card.Title>
+                                <Card.Text>
+                                    <h3>{shortenTitle(o.title)}</h3>
+                                    <p>Type : {o.category}</p>
+                                </Card.Text>
+                                {o.onTheater ? (
+                                    <div>
+                                        <Button onClick={() => handleSelectmovie(o)} variant="success" className="m-1">
+                                            <FaTicket /> Buy ticket
+                                        </Button>
+                                        <Button onClick={() => handleSelectmovie(o)} className="transparent-button m-1">
+                                            <FaInfo /> Info
+                                        </Button>
+                                    </div>
+                                ) : (
+                                    <Button onClick={() => handleSelectmovie(o)} className="transparent-button m-1">
+                                        <FaInfo /> Detail Infomation
                                     </Button>
-                                    <Button className="transparent-button">
-                                        <FaInfo />
-                                    </Button>
-                                </Card.Body>
-                            </Card>
-                        </Col>
+                                )}
+                            </Card.Body>
+                        </Card>
                     ))}
-                </Row>
+                </Flickity>
                 {selectedMovies && (
-                <ModalMovies data={selectedMovies} show={modalShow} onHide={() => setModalShow(false)} />
+                    <ModalMovies data={selectedMovies} show={modalShow} onHide={() => setModalShow(false)} />
                 )}
             </Container>
-        </Container>
+        </Container >
     );
 }
 

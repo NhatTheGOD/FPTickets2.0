@@ -15,19 +15,7 @@
     ],
     "onTheaterMovies": [
         {
-            "title": "The watcher",
-            "description":"Một nghệ sĩ trẻ bị mắc kẹt trong một khu rừng rộng lớn, nguyên sơ ở phía tây Ireland, sau khi tìm được nơi trú ẩn, cô bị mắc kẹt cùng với ba người lạ, bị những sinh vật bí ẩn rình rập mỗi đêm.",
-            "ageUnder":"T16",
-            "type":"2D",
-            "director":"Ishana Shyamalan",
-            "category": "Fantasy",
-            "startDate": "14/06/2024",
-            "time" : "120",
-            "language": "sub",
-            "img":"./images/movies/TheWatcher.png",
-            "onTheater":true
-        },
-        {
+            "id": 1,
             "title": "LẬT MẶT 7: MỘT ĐIỀU ƯỚC",
             "description":"Bộ phim “chữa lành” lấy cảm hứng từ những câu chuyện thường nhật trong đời sống gia đình. Câu chuyện xoay quanh một người mẹ và những đứa con với tựa “Một Điều Ước”.",
             "ageUnder":"K",
@@ -41,6 +29,7 @@
             "onTheater":true
         },
         {
+            "id": 2,
             "title": "TOTTO-CHAN: THE LITTLE GIRL AT THE WINDOW",
             "description":"Một ngôi trường lý tưởng ở Tokyo trong Thế chiến thứ hai kết hợp việc học với niềm vui, sự tự do và tình yêu. Ngôi trường khác thường này có những toa tàu cũ dùng làm lớp học và được điều hành bởi một người đàn ông phi thường.",
             "ageUnder":"K",
@@ -54,6 +43,7 @@
             "onTheater":true
         },
         {
+            "id":3,
             "title": "DORAEMON THE MOVIE: NOBITA S EARTH SYMPHONY",
             "description":"Doraemon và những người bạn thực hiện chuyến phiêu lưu để gặp gỡ những người bạn mới, kết nối mọi người bằng âm nhạc và cứu thế giới khỏi khủng hoảng.",
             "ageUnder":"P",
@@ -67,6 +57,7 @@
             "onTheater":true
         },
         {
+            "id":4,
             "title": "STALKER",
             "description":"Một đại lý bất động sản bí mật vào nhà khách hàng và bị ám ảnh bởi một người có ảnh hưởng lừa đảo trên mạng xã hội. Bộ phim khám phá các chủ đề về nỗi ám ảnh, danh tính và mặt tối của mạng xã hội.",
             "ageUnder":"T16",
@@ -80,6 +71,7 @@
             "onTheater":false
         },
         {
+            "id":5,
             "title": "PEE NAK 4",
             "description":"Ba người bạn thấy mình đang ở một ngôi chùa cổ nằm ở ngoại ô thành phố. Tuy nhiên, ngôi chùa này ẩn chứa một truyền thuyết đáng sợ: bất cứ ai mong muốn được xuất gia làm tu sĩ ở đó đều bị nguyền rủa.",
             "ageUnder":"T16",
@@ -90,6 +82,111 @@
             "time" : "111",
             "language": "Phụ đề",
             "img":"./images/movies/penak.png",
+            "onTheater":false
+        },
+        {   
+            "id":6,
+            "title": "HOW TO MAKE MILLIONS: GIA TÀI CỦA NGOẠI",
+            "description":"Một người đàn ông nghỉ việc để chăm sóc bà ngoại đang hấp hối, được thúc đẩy bởi vận may của bà. Anh ta lên kế hoạch để giành được sự ưu ái của ngoại trước khi bà qua đời.",
+            "ageUnder":"T13",
+            "type":"2D",
+            "director":"Pat Boonnitipat",
+            "category": "Drama",
+            "startDate": "07/06/2024",
+            "time" : "1237",
+            "language": "Lồng tiếng",
+            "img":"./images/movies/giatai.jpg",
+            "onTheater":true
+        },{   
+            "id":7,
+            "title": "BAD BOYS: NHỮNG GÃ TRAI HƯ",
+            "description":"Những Gã Trai Hư được yêu thích trên toàn thế giới đã trở lại với sự kết hợp mang tính biểu tượng giữa hành động ngay tại chỗ và hài kịch gây sốc nhưng lần này có một sự thay đổi: những bộ phim hay nhất của Miami hiện đang trên đường chạy trốn.",
+            "ageUnder":"T18",
+            "type":"2D",
+            "director":"Adil El Arbi, Bilall Fallah",
+            "category": "Dama",
+            "startDate": "07/06/2024",
+            "time" : "115",
+            "language": "Phụ đề",
+            "img":"./images/movies/badboy.jpg",
+            "onTheater":true
+        },{   
+            "id":8,
+            "title": "MÓNG VUỐT",
+            "description":"Móng Vuốt dẫn dắt người xem đồng hành với buổi tiệc dã ngoại náo nhiệt của một nhóm bạn trong rừng sâu. Tuy nhiên, buổi tiệc nhanh chóng trở thành một cuộc chiến sống còn giữa họ và một con quái thú không thể định hình và cực kỳ nguy hiểm. Nó vô hình, nha",
+            "ageUnder":"T16",
+            "type":"2D",
+            "director":"Lê Thanh Sơn",
+            "category": "Horror",
+            "startDate": "Lê Thanh Sơn",
+            "time" : "96",
+            "language": "Phụ đề",
+            "img":"./images/movies/claw.jpg",
+            "onTheater":true
+        },{   
+            "id":9,
+            "title": "DESPICABLE ME: KẺ TRỘM MẶT TRĂNG 4",
+            "description":"Gru, Lucy, Margo, Edith và Agnes chào đón thành viên mới đến với gia đình, Gru Jr., kẻ đang có ý định hành hạ bố mình. Gru phải đối mặt với kẻ thù mới là Maxime Le Mal và bạn gái Valentina, còn cả gia đình buộc phải chạy trốn.",
+            "ageUnder":"P",
+            "type":"2D",
+            "director":"Chris Renaud, Patrick Delage",
+            "category": "Animation",
+            "startDate": "05/07/2024",
+            "time" : "96",
+            "language": "Phụ đề",
+            "img":"./images/movies/dora.png",
+            "onTheater":true
+        },{   
+            "id":10,
+            "title": "THE EXORCISM: THẦY TRỪ TÀ",
+            "description":"Một diễn viên gặp rắc rối bắt đầu có hành vi gây rối khi quay một bộ phim kinh dị. Cô con gái bị ghẻ lạnh của ông tự hỏi liệu ông có đang quay trở lại với những cơn nghiện trong quá khứ hay có điều gì đó độc ác hơn đang diễn ra.",
+            "ageUnder":"T18",
+            "type":"2D",
+            "director":"Joshua John Miller",
+            "category": "Horror",
+            "startDate": "14/06/2024",
+            "time" : "118",
+            "language": "Phụ đề",
+            "img":"./images/movies/exor.jpg",
+            "onTheater":false
+        },{   
+            "id":11,
+            "title": "DEADPOOL AND WOLVRINE",
+            "description":"Wolverine đang hồi phục vết thương thì gặp phải Deadpool mồm mép. Họ đã hợp thành một đội để đánh bại kẻ thù chung.",
+            "ageUnder":"T18",
+            "type":"2D",
+            "director":"Shawn Levy",
+            "category": "Horror",
+            "startDate": "14/06/2024",
+            "time" : "118",
+            "language": "Phụ đề",
+            "img":"./images/movies/deadpool.png",
+            "onTheater":false
+        },{   
+            "id":11,
+            "title": "DETECTIVE CONAN: NGÔI SAO 5 CÁNH 1 TRIỆU ĐÔ",
+            "description":"“Sự thật” ẩn giấu trong thanh kiếm cắt xuyên màn đêm đen tối và dẫn chúng ta xuống dưới ánh trăng. Tình yêu và những sự cố diễn ra theo những cách đầy sóng gió. Cuộc chiến kho báu bí ẩn sẽ chia cắt thế giới đã bắt đầu.",
+            "ageUnder":"T18",
+            "type":"2D",
+            "director":"Chika",
+            "category": "Animation",
+            "startDate": "14/06/2024",
+            "time" : "118",
+            "language": "Phụ đề",
+            "img":"./images/movies/conan.png",
+            "onTheater":false
+        },{   
+            "id":11,
+            "title": "HELLO JADOO SPECIAL: ĐẠI DƯƠNG DIỆU KỲ",
+            "description":"Trong kỳ nghỉ trên biển, Jadoo tinh nghịch trở thành chiến binh rùa xuất sắc tại thủy cung. Cô có nhiệm vụ đi bắt chú thỏ để có thể giành lại trái tim của Vua Rồng. Nhưng giữa Jadoo và chú thỏ lại xảy sinh một tình bạn đáng quý. Điều gì sẽ xảy ra với họ?",
+            "ageUnder":"T18",
+            "type":"2D",
+            "director":"Son Seok-woo",
+            "category": "Animation",
+            "startDate": "14/06/2024",
+            "time" : "118",
+            "language": "Phụ đề",
+            "img":"./images/movies/jado.jpg",
             "onTheater":false
         }
     ],

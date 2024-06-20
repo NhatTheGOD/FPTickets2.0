@@ -16,3 +16,9 @@
     background-color:  #198754;
     border: none;
 }
+
+.custom-card{
+    width: 18rem;
+    padding: 16px;
+    border-radius: 5px;
+}

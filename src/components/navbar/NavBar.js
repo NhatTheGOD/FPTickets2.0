@@ -16,10 +16,10 @@ const NavBar = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
-                            <Nav.Link href="#home">Lịch chiếu</Nav.Link>
-                            <Nav.Link href="#about">Hệ thống rạp</Nav.Link>
-                            <Nav.Link href="#contact">Khuyến Mãi/ Sự kiện</Nav.Link>
-                            <Nav.Link href="#contact">Cửa hàng</Nav.Link>
+                            <Nav.Link href="/">Lịch chiếu</Nav.Link>
+                            <Nav.Link href="/theater">Hệ thống rạp</Nav.Link>
+                            <Nav.Link href="/promo">Khuyến Mãi/ Sự kiện</Nav.Link>
+                            <Nav.Link href="/shop">Cửa hàng</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                     <div className="d-none d-sm-block ">
