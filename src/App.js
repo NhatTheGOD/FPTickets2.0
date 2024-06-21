@@ -3,8 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from "./components/navbar/NavBar";
 import Footer from "./components/footer/Footer";
 import Homepages from "./pages/Homepages";
-import CarouselComponent from "./pages/UserDetail";
 import NotFound from "./pages/Notfound";
+import ShowTimes from "./pages/ShowTimes";
+import Test from "./pages/Test";
 import './App.css'
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
         <NavBar />
           <Routes>
             <Route path="/" element={<Homepages />} />
-            <Route path="/user" element={<CarouselComponent />} />
+            <Route path="/showtime" element={<ShowTimes />} />
+            <Route path="/theater" element={<Test />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         <Footer />

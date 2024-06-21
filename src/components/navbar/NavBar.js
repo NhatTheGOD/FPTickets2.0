@@ -16,7 +16,7 @@ const NavBar = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
-                            <Nav.Link href="/">Lịch chiếu</Nav.Link>
+                            <Nav.Link href="/showtime">Lịch chiếu</Nav.Link>
                             <Nav.Link href="/theater">Hệ thống rạp</Nav.Link>
                             <Nav.Link href="/promo">Khuyến Mãi/ Sự kiện</Nav.Link>
                             <Nav.Link href="/shop">Cửa hàng</Nav.Link>

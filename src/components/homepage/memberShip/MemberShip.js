@@ -1,4 +1,4 @@
-import { Container, Row, Col,Image, Button } from "react-bootstrap";
+import { Container, Row,Card, Col,Image, Button } from "react-bootstrap";
 
 const MemberShip = ({ memberShip }) => {
     return (
@@ -8,7 +8,9 @@ const MemberShip = ({ memberShip }) => {
             <Row className="p-4">
                 {memberShip.map(m => (
                     <Col md={4}>
+                        <Card>
                         <Image src={m.img} rounded/>
+                        </Card>
                     </Col>
                 ))}
             </Row>
