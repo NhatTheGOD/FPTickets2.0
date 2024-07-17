@@ -1,4 +1,5 @@
 import { Container, Row,Card, Col,Image, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const MemberShip = ({ memberShip }) => {
     return (
@@ -14,7 +15,7 @@ const MemberShip = ({ memberShip }) => {
                     </Col>
                 ))}
             </Row>
-            <Button className="transparent-button">ASIGN NOW</Button>
+            <Link to='/login' className="btn btn-success transparent-button">ASIGN NOW</Link>
             </Container>
         </Container>
     );

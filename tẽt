@@ -1,0 +1,12 @@
+<Form>
+                            <Form.Group className="p-2">
+                                <Form.Label>Email *</Form.Label>
+                                <Form.Control className="transparent-input" type="text" placeholder="Enter your Email" />
+                            </Form.Group>
+                            <Form.Group className="p-2">
+                                <Form.Label>Password*</Form.Label>
+                                <Form.Control className="transparent-input" type="password" placeholder="Enter your password" />
+                            </Form.Group>
+                            <Button variant="success">LOGIN</Button>
+                            <Link style={{color : '#beea4c'}} className="text-success" to='/forgot'>Forgot your password?</Link>
+                        </Form>

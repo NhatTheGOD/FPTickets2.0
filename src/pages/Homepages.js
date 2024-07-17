@@ -5,7 +5,6 @@ import ModalMovies from "../components/homepage/movieDetailModal/ModalMovies";
 import MemberShip from "../components/homepage/memberShip/MemberShip";
 import { getMoviesData } from "../services/movieService";
 import { getMemberShip } from "../services/membershipService";
-import axios from "axios";
 
 const Homepages = () => {
 

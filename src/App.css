@@ -1,5 +1,11 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
 .fix-nav{
     margin-top: 180px;
+    background-color: black;
 }
 
 .transparent-button {
@@ -17,8 +23,41 @@
     border: none;
 }
 
+.transparent-input {
+    background-color: transparent; /* Set background to transparent */
+    border: 1px solid #408558; /* Optional: Add border for visibility */
+    padding: 10px; /* Optional: Add padding for spacing */
+    color: #ffffff; /* Optional: Set text color */
+    outline: none; /* Optional: Remove default outline */
+    
+}
+
+.transparent-input:focus {
+    background-color: transparent; /* Set background to transparent */
+    color: white;
+}
+
+.transparent-input::placeholder {
+    color: rgba(255, 255, 255, 0.704); /* Màu của placeholder */
+}
+
 .custom-card{
     width: 18rem;
     padding: 16px;
     border-radius: 5px;
 }
+
+.border-bottom-custom{
+    border-bottom: solid 1px grey;
+}
+
+.table-dark-custom {
+    background-color: #343a40; /* Màu nền tối */
+    color: white; /* Màu chữ trắng */
+}
+
+.table-dark-custom th,
+.table-dark-custom td {
+    border-color: #454d55; /* Màu viền */
+}
+

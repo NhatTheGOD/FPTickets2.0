@@ -44,7 +44,7 @@ const MovieCard = ({ movies, title }) => {
     }
 
     return (
-        <Container style={{ borderBottom: "1px solid grey" }} fluid className="p-4 bg-dark">
+        <Container fluid className="border-bottom-custom p-4 bg-dark">
             <Container>
                 <h2 className="p-4 text-white text-center">{title}</h2>
                 <Flickity

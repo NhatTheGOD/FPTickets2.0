@@ -26,10 +26,10 @@
       "director": "Lý Hải",
       "category": "Healing",
       "startDate": "26/04/2024",
-      "time": "139",
+      "time": "138",
       "language": "sub",
       "img": "/images/movies/latmat7.jpeg",
-      "onTheater": false
+      "onTheater": true
     },
     {
       "id": "2",
@@ -198,26 +198,6 @@
       "language": "Phụ đề",
       "img": "/images/movies/jado.jpg",
       "onTheater": false
-    },
-    {
-      "id": "51c7",
-      "title": "AVENTER:OPERATOR",
-      "ageUnder": "18",
-      "type": "Comedy",
-      "director": "Jack Snyder",
-      "time": "180",
-      "img": "/images/movies/conan.png",
-      "onTheater": true
-    },
-    {
-      "id": "a472",
-      "title": "FEr202",
-      "ageUnder": "18",
-      "type": "Comedy",
-      "director": "Thay Tho",
-      "time": "147",
-      "img": "/images/movies/conan.png",
-      "onTheater": true
     }
   ],
   "memberShip": [
@@ -265,52 +245,21 @@
   ],
   "users": [
     {
+      "id": "2",
+      "firstName": "Nhat",
+      "lastName": "Nguyen",
+      "gender": "male",
+      "email": "nhat@gmail.com",
+      "password": "123",
+      "phoneNumber": "0911662996",
+      "dateOfBirth": "3000-07-02",
+      "role": "user"
+    },
+    {
       "id": "1",
       "email": "admin",
       "password": "123",
       "role": "admin"
-    },
-    {
-      "id": "2",
-      "firstName": "Long",
-      "lastName": "Nhat",
-      "gender": "male",
-      "email": "longnhat@gmail.com",
-      "password": "10032002",
-      "reEnterPassword": "10032002",
-      "phoneNumber": "0911662996",
-      "dateOfBirth": "2000-08-06",
-      "role": "user",
-      "active": true,
-      "totalAmount": 17750000
-    },
-    {
-      "id": "3",
-      "firstName": "Nhat",
-      "lastName": "long",
-      "gender": "male",
-      "email": "long@gmail.com",
-      "password": "1003",
-      "reEnterPassword": "1003",
-      "phoneNumber": "0911662997",
-      "dateOfBirth": "1999-09-08",
-      "role": "user",
-      "active": true,
-      "totalAmount": 11000000
-    },
-    {
-      "id": "eee1",
-      "firstName": "Nhat",
-      "lastName": "Nguyen",
-      "gender": "male",
-      "email": "nhat123@gmail.com",
-      "password": "10032002",
-      "reEnterPassword": "10032002",
-      "phoneNumber": "0911662996",
-      "dateOfBirth": "2000-08-07",
-      "role": "user",
-      "active": true,
-      "totalAmount": 0
     }
   ],
   "event": [
@@ -419,67 +368,83 @@
   ],
   "tickets": [
     {
-      "id": "2cdc",
-      "userId": "63d1",
-      "movieID": "2",
-      "quantity": 22,
-      "showTime": "18",
-      "cinema": "FER202 Theater",
-      "showDate": "2024-07-18T06:01:21.000Z",
+      "id": "bb84",
+      "userId": "2",
+      "movieID": "3",
+      "quantity": 3,
+      "showTime": "7",
+      "cinema": "Hola Theater",
+      "showDate": "2024-07-10T06:26:20.286Z",
       "foods": {},
-      "totalAmount": "5.500.000"
+      "totalAmount": "750.000"
     },
     {
-      "id": "ee27",
-      "userId": "63d1",
-      "movieID": "3",
-      "quantity": 22,
-      "showTime": "22",
-      "cinema": "SDN301 Theater",
-      "showDate": "2024-07-19T06:02:33.000Z",
-      "foods": {
-        "1": 5
-      },
-      "totalAmount": "5.500.000"
-    },
-    {
-      "id": "78a0",
+      "id": "7488",
       "userId": "2",
-      "movieID": "3",
-      "quantity": 28,
-      "showTime": "22",
-      "cinema": "FER202 Theater",
-      "showDate": "2024-07-17T06:14:36.919Z",
-      "foods": {
-        "1": 0
-      },
-      "totalAmount": "7.000.000"
-    },
-    {
-      "id": "19a6",
-      "userId": "2",
-      "movieID": "6",
-      "quantity": 4,
+      "movieID": "2",
+      "quantity": 5,
       "showTime": "18",
       "cinema": "FER202 Theater",
-      "showDate": "2024-07-18T06:15:01.000Z",
-      "foods": {
-        "1": 0
-      },
-      "totalAmount": "1.000.000"
+      "showDate": "2024-07-10T06:53:25.859Z",
+      "foods": {},
+      "totalAmount": 1250000
     },
     {
-      "id": "fb40",
+      "id": "8371",
       "userId": "2",
-      "movieID": "7",
-      "quantity": 4,
+      "movieID": "3",
+      "quantity": 6,
+      "showTime": "",
+      "cinema": "FER202 Theater",
+      "showDate": "2024-07-11T06:55:34.000Z",
+      "foods": {},
+      "totalAmount": 1500000
+    },
+    {
+      "id": "93c4",
+      "userId": "2",
+      "movieID": "3",
+      "quantity": 1,
+      "showTime": "",
+      "cinema": "",
+      "showDate": "2024-07-10T07:23:09.286Z",
+      "foods": {},
+      "totalAmount": 250000
+    },
+    {
+      "id": "4221",
+      "userId": "2",
+      "movieID": "2",
+      "quantity": 3,
       "showTime": "7",
       "cinema": "FER202 Theater",
-      "showDate": "2024-07-19T07:00:49.000Z",
+      "showDate": "2024-07-15T07:34:28.000Z",
       "foods": {
-        "1": 5
+        "1": 4
       },
+      "totalAmount": 750000
+    },
+    {
+      "id": "6dfb",
+      "userId": "2",
+      "movieID": "2",
+      "quantity": 4,
+      "showTime": "",
+      "cinema": "FER202 Theater",
+      "showDate": "2024-07-10T07:34:46.602Z",
+      "foods": {},
       "totalAmount": "1.000.000"
+    },
+    {
+      "id": "85a8",
+      "userId": "2",
+      "movieID": "6",
+      "quantity": 5,
+      "showTime": "7",
+      "cinema": "FER202 Theater",
+      "showDate": "2024-07-12T05:58:27.567Z",
+      "foods": {},
+      "totalAmount": "1.250.000"
     }
   ]
 }

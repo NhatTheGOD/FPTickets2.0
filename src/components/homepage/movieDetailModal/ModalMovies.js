@@ -1,6 +1,7 @@
 import { Modal } from "react-bootstrap";
 import { Row, Col, Button,Badge } from "react-bootstrap";
 import { FaTicket } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const ModalMovies = (props) => {
     return (
@@ -17,7 +18,9 @@ const ModalMovies = (props) => {
                             <Col md={4}>
                                 <img  style={{ width: '100%' }} src={props.data.img} alt={props.data.title} />
                                 <div className="mt-4 d-flex justify-content-between">
-                                    <Button variant="success"><FaTicket /> Buy ticket now</Button>
+                                    {props.data.onTheater ? (
+                                    <Link to={`order/${props.data.id}`} className="btn btn-success"><FaTicket /> Buy ticket now</Link>
+                                    ) : null}
                                     <Button className="transparent-button" href="https://www.youtube.com/embed/abPmZCZZrFA" >Watch Trailer</Button>
                                 </div>
                             </Col>
