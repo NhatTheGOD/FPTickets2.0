@@ -1,7 +1,7 @@
+import React, { useState } from "react";
 import axios from "axios";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button, Container, Form } from "react-bootstrap";
+import { Button, Container, FormControl, FormControlLabel, FormGroup, InputLabel, MenuItem, Select, Switch, TextField, Box } from "@mui/material";
 
 const AddMovies = () => {
     const [movie, setMovie] = useState({
@@ -13,7 +13,6 @@ const AddMovies = () => {
         img: '',
         onTheater: false
     });
-
     const navigate = useNavigate();
 
     const handleChange = (e) => {
@@ -35,92 +34,98 @@ const AddMovies = () => {
     };
 
     return (
-        <Container fluid className="pt-4">
-            <h3>Add New Movie</h3>
-            <Form onSubmit={handleSubmit}>
-                <Form.Group className="mb-3" controlId="formTitle">
-                    <Form.Label>Title</Form.Label>
-                    <Form.Control 
-                        type="text" 
-                        placeholder="Enter movie title" 
-                        name="title" 
-                        value={movie.title} 
-                        onChange={handleChange} 
-                        required 
+        <Container sx={{ pt: 4 }}>
+            <Box sx={{ p: 3, bgcolor: 'background.paper', boxShadow: 3, borderRadius: 2 }}>
+                <h3>Add New Movie</h3>
+                <form onSubmit={handleSubmit}>
+                    <TextField
+                        fullWidth
+                        label="Title"
+                        variant="outlined"
+                        className="mb-3"
+                        name="title"
+                        value={movie.title}
+                        onChange={handleChange}
+                        required
                     />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formAgeUnder">
-                    <Form.Label>Age Rating</Form.Label>
-                    <Form.Select 
-                        type="text" 
-                        placeholder="Enter age rating" 
-                        name="ageUnder" 
-                        value={movie.ageUnder} 
-                        onChange={handleChange} 
-                        required 
-                    >
-                        <option>P</option>
-                        <option>18</option>
-                        <option>K</option>
-                    </Form.Select>
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formType">
-                    <Form.Label>Type</Form.Label>
-                    <Form.Control 
-                        type="text" 
-                        placeholder="Enter movie type" 
-                        name="type" 
-                        value={movie.type} 
-                        onChange={handleChange} 
-                        required 
+                    <FormControl fullWidth variant="outlined" className="mb-3">
+                        <InputLabel>Age Rating</InputLabel>
+                        <Select
+                            value={movie.ageUnder}
+                            onChange={handleChange}
+                            label="Age Rating"
+                            name="ageUnder"
+                            required
+                        >
+                            <MenuItem value="P">P</MenuItem>
+                            <MenuItem value="18">18</MenuItem>
+                            <MenuItem value="K">K</MenuItem>
+                        </Select>
+                    </FormControl>
+                    <FormControl fullWidth variant="outlined" className="mb-3">
+                        <InputLabel>Type</InputLabel>
+                        <Select
+                            value={movie.type}
+                            onChange={handleChange}
+                            label="Type"
+                            name="type"
+                        >
+                            <MenuItem value="Action">Action</MenuItem>
+                            <MenuItem value="Comedy">Comedy</MenuItem>
+                            <MenuItem value="Drama">Drama</MenuItem>
+                            <MenuItem value="Sci-Fi">Sci-Fi</MenuItem>
+                            <MenuItem value="Other">Other</MenuItem>
+                        </Select>
+                    </FormControl>
+                    <TextField
+                        fullWidth
+                        label="Director"
+                        variant="outlined"
+                        className="mb-3"
+                        name="director"
+                        value={movie.director}
+                        onChange={handleChange}
+                        required
                     />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formDirector">
-                    <Form.Label>Director</Form.Label>
-                    <Form.Control 
-                        type="text" 
-                        placeholder="Enter director's name" 
-                        name="director" 
-                        value={movie.director} 
-                        onChange={handleChange} 
-                        required 
+                    <TextField
+                        fullWidth
+                        label="Duration (in minutes)"
+                        variant="outlined"
+                        className="mb-3"
+                        type="number"
+                        name="time"
+                        value={movie.time}
+                        onChange={handleChange}
+                        required
                     />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formTime">
-                    <Form.Label>Duration (in minutes)</Form.Label>
-                    <Form.Control 
-                        type="number" 
-                        placeholder="Enter duration" 
-                        name="time" 
-                        value={movie.time} 
-                        onChange={handleChange} 
-                        required 
+                    <TextField
+                        fullWidth
+                        label="Image URL"
+                        variant="outlined"
+                        className="mb-3"
+                        name="img"
+                        value={movie.img}
+                        onChange={handleChange}
+                        required
                     />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formImg">
-                    <Form.Label>Image URL</Form.Label>
-                    <Form.Control 
-                        type="text" 
-                        placeholder="Enter image URL" 
-                        name="img" 
-                        value={movie.img} 
-                        onChange={handleChange} 
-                        required 
-                    />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formOnTheater">
-                    <Form.Check 
-                        type="checkbox" 
-                        label="Now Showing" 
-                        name="onTheater" 
-                        checked={movie.onTheater} 
-                        onChange={handleChange} 
-                    />
-                </Form.Group>
-                <Button variant="primary" type="submit">
-                    Add Movie
-                </Button>
-            </Form>
+                    <FormGroup className="mb-3">
+                        <FormControlLabel
+                            control={
+                                <Switch
+                                    checked={movie.onTheater}
+                                    onChange={(e) => setMovie({ ...movie, onTheater: e.target.checked })}
+                                    name="onTheater"
+                                    color="primary"
+                                />
+                            }
+                            label="Now Showing"
+                        />
+                    </FormGroup>
+                    <Button variant="contained" color="primary" type="submit">
+                        Add Movie
+                    </Button>
+                </form>
+            </Box>
         </Container>
     );
 }

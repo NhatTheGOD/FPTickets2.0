@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 const ModalMovies = (props) => {
     return (
+        
         <>
             <Modal
                 size="xl"
@@ -19,7 +20,7 @@ const ModalMovies = (props) => {
                                 <img  style={{ width: '100%' }} src={props.data.img} alt={props.data.title} />
                                 <div className="mt-4 d-flex justify-content-between">
                                     {props.data.onTheater ? (
-                                    <Link to={`order/${props.data.id}`} className="btn btn-success"><FaTicket /> Buy ticket now</Link>
+                                    <Link to={localStorage.getItem('role') ? `order/${props.data.id}` : "/login"} className="btn btn-success"><FaTicket /> Buy ticket now</Link>
                                     ) : null}
                                     <Button className="transparent-button" href="https://www.youtube.com/embed/abPmZCZZrFA" >Watch Trailer</Button>
                                 </div>

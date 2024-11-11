@@ -22,7 +22,7 @@
       "title": "LẬT MẶT 7: MỘT ĐIỀU ƯỚC",
       "description": "Bộ phim “chữa lành” lấy cảm hứng từ những câu chuyện thường nhật trong đời sống gia đình. Câu chuyện xoay quanh một người mẹ và những đứa con với tựa “Một Điều Ước”.",
       "ageUnder": "K",
-      "type": "2D",
+      "type": "Drama",
       "director": "Lý Hải",
       "category": "Healing",
       "startDate": "26/04/2024",
@@ -71,7 +71,7 @@
       "time": "103",
       "language": "Phụ đề",
       "img": "/images/movies/stalker.png",
-      "onTheater": false
+      "onTheater": true
     },
     {
       "id": "5",
@@ -99,7 +99,7 @@
       "time": "1237",
       "language": "Lồng tiếng",
       "img": "/images/movies/giatai.jpg",
-      "onTheater": true
+      "onTheater": false
     },
     {
       "id": "7",
@@ -198,26 +198,6 @@
       "language": "Phụ đề",
       "img": "/images/movies/jado.jpg",
       "onTheater": false
-    },
-    {
-      "id": "51c7",
-      "title": "AVENTER:OPERATOR",
-      "ageUnder": "18",
-      "type": "Comedy",
-      "director": "Jack Snyder",
-      "time": "180",
-      "img": "/images/movies/conan.png",
-      "onTheater": true
-    },
-    {
-      "id": "a472",
-      "title": "FEr202",
-      "ageUnder": "18",
-      "type": "Comedy",
-      "director": "Thay Tho",
-      "time": "147",
-      "img": "/images/movies/conan.png",
-      "onTheater": true
     }
   ],
   "memberShip": [
@@ -244,7 +224,27 @@
       "img": "/images/theater/hola.png",
       "place": "Khu Cnc hola, Ha Noi, VietNam",
       "phoneNumber": "0911662996",
-      "email": "fpticket@gmail.com"
+      "email": "fpticket@gmail.com",
+      "seat": [
+        {
+          "id": 1,
+          "class": "VIP",
+          "chair": 20,
+          "price": 250000
+        },
+        {
+          "id": 2,
+          "class": "Classic",
+          "chair": 15,
+          "price": 150000
+        },
+        {
+          "id": 3,
+          "class": "SweetBox",
+          "chair": 10,
+          "price": 400000
+        }
+      ]
     },
     {
       "id": "2",
@@ -252,7 +252,27 @@
       "img": "/images/theater/fer202.png",
       "place": "Khu Cnc hola, Ha Noi, VietNam",
       "phoneNumber": "0911662996",
-      "email": "fpticket@gmail.com"
+      "email": "fpticket@gmail.com",
+      "seat": [
+        {
+          "id": 1,
+          "class": "VIP",
+          "chair": 30,
+          "price": 250000
+        },
+        {
+          "id": 2,
+          "class": "Classic",
+          "chair": 50,
+          "price": 150000
+        },
+        {
+          "id": 3,
+          "class": "SweetBox",
+          "chair": 20,
+          "price": 400000
+        }
+      ]
     },
     {
       "id": "3",
@@ -260,7 +280,27 @@
       "img": "/images/theater/sdn301.png",
       "place": "Khu Cnc hola, Ha Noi, VietNam",
       "phoneNumber": "0911662996",
-      "email": "fpticket@gmail.com"
+      "email": "fpticket@gmail.com",
+      "seat": [
+        {
+          "id": 1,
+          "class": "VIP",
+          "chair": 10,
+          "price": 250000
+        },
+        {
+          "id": 2,
+          "class": "Classic",
+          "chair": 100,
+          "price": 150000
+        },
+        {
+          "id": 3,
+          "class": "SweetBox",
+          "chair": 5,
+          "price": 400000
+        }
+      ]
     }
   ],
   "users": [
@@ -268,49 +308,62 @@
       "id": "1",
       "email": "admin",
       "password": "123",
-      "role": "admin"
+      "role": "admin",
+      "active": true
     },
     {
-      "id": "2",
-      "firstName": "Long",
-      "lastName": "Nhat",
+      "id": "25f",
+      "firstName": "Nhat",
+      "lastName": "Nguyen",
+      "gender": "male",
+      "email": "nhat@gmail.com",
+      "password": "123",
+      "reEnterPassword": "123",
+      "phoneNumber": "0911662996",
+      "dateOfBirth": "2024-07-06",
+      "role": "user",
+      "active": false,
+      "totalAmount": 0
+    },
+    {
+      "id": "431a",
+      "firstName": "Nhat",
+      "lastName": "Nguyen",
       "gender": "male",
       "email": "longnhat@gmail.com",
-      "password": "10032002",
-      "reEnterPassword": "10032002",
+      "password": "123123",
+      "reEnterPassword": "123123",
+      "phoneNumber": "0911882774",
+      "dateOfBirth": "2001-02-06",
+      "role": "user",
+      "active": true,
+      "totalAmount": 20128900
+    },
+    {
+      "id": "9070",
+      "firstName": "Nhat",
+      "lastName": "Nguyen",
+      "gender": "male",
+      "email": "nhat01525@gmail.com",
+      "password": "123123",
+      "phoneNumber": "0911662996",
+      "dateOfBirth": "2024-07-18",
+      "role": "user",
+      "active": true,
+      "totalAmount": 0
+    },
+    {
+      "id": "bcb2",
+      "firstName": "Nhat",
+      "lastName": "Nguyen",
+      "gender": "male",
+      "email": "nhatnlde140307@fpt.edu.vn",
+      "password": "10032002aa",
       "phoneNumber": "0911662996",
       "dateOfBirth": "2000-08-06",
       "role": "user",
       "active": true,
-      "totalAmount": 17750000
-    },
-    {
-      "id": "3",
-      "firstName": "Nhat",
-      "lastName": "long",
-      "gender": "male",
-      "email": "long@gmail.com",
-      "password": "1003",
-      "reEnterPassword": "1003",
-      "phoneNumber": "0911662997",
-      "dateOfBirth": "1999-09-08",
-      "role": "user",
-      "active": true,
-      "totalAmount": 11000000
-    },
-    {
-      "id": "eee1",
-      "firstName": "Nhat",
-      "lastName": "Nguyen",
-      "gender": "male",
-      "email": "nhat123@gmail.com",
-      "password": "10032002",
-      "reEnterPassword": "10032002",
-      "phoneNumber": "0911662996",
-      "dateOfBirth": "2000-08-07",
-      "role": "user",
-      "active": true,
-      "totalAmount": 0
+      "totalAmount": 5010500
     }
   ],
   "event": [
@@ -419,67 +472,380 @@
   ],
   "tickets": [
     {
-      "id": "2cdc",
-      "userId": "63d1",
-      "movieID": "2",
-      "quantity": 22,
-      "showTime": "18",
-      "cinema": "FER202 Theater",
-      "showDate": "2024-07-18T06:01:21.000Z",
+      "id": "099f",
+      "movieId": "3",
+      "showingId": "ea51",
+      "seats": {
+        "VIP": 6,
+        "Classic": 2,
+        "SweetBox": 9
+      },
+      "foods": {
+        "1": 2,
+        "3": 2
+      },
+      "totalPrice": 6721000,
+      "userId": "431a",
+      "emXinhTuoi": true,
+      "pay": false
+    },
+    {
+      "id": "237f",
+      "movieId": "3",
+      "showingId": "ea51",
+      "seats": {
+        "VIP": 4
+      },
       "foods": {},
-      "totalAmount": "5.500.000"
+      "totalPrice": 1650000,
+      "userId": "431a",
+      "emXinhTuoi": true,
+      "pay": false
     },
     {
-      "id": "ee27",
-      "userId": "63d1",
-      "movieID": "3",
-      "quantity": 22,
-      "showTime": "22",
-      "cinema": "SDN301 Theater",
-      "showDate": "2024-07-19T06:02:33.000Z",
-      "foods": {
-        "1": 5
+      "id": "a9a0",
+      "movieId": "3",
+      "showingId": "ea51",
+      "seats": {
+        "VIP": 3
       },
-      "totalAmount": "5.500.000"
-    },
-    {
-      "id": "78a0",
-      "userId": "2",
-      "movieID": "3",
-      "quantity": 28,
-      "showTime": "22",
-      "cinema": "FER202 Theater",
-      "showDate": "2024-07-17T06:14:36.919Z",
       "foods": {
         "1": 0
       },
-      "totalAmount": "7.000.000"
+      "totalPrice": 825000,
+      "userId": "431a",
+      "emXinhTuoi": false,
+      "pay": false
     },
     {
-      "id": "19a6",
-      "userId": "2",
-      "movieID": "6",
-      "quantity": 4,
-      "showTime": "18",
-      "cinema": "FER202 Theater",
-      "showDate": "2024-07-18T06:15:01.000Z",
-      "foods": {
-        "1": 0
+      "id": "ebf7",
+      "movieId": "3",
+      "showingId": "ea51",
+      "seats": {
+        "Classic": 2
       },
-      "totalAmount": "1.000.000"
+      "foods": {},
+      "totalPrice": 880000,
+      "userId": "431a",
+      "emXinhTuoi": true,
+      "pay": false
     },
     {
-      "id": "fb40",
-      "userId": "2",
-      "movieID": "7",
-      "quantity": 4,
-      "showTime": "7",
-      "cinema": "FER202 Theater",
-      "showDate": "2024-07-19T07:00:49.000Z",
-      "foods": {
-        "1": 5
+      "id": "0b8e",
+      "movieId": "8",
+      "showingId": "0bac",
+      "seats": {
+        "Classic": 8,
+        "VIP": 10
       },
-      "totalAmount": "1.000.000"
+      "foods": {
+        "1": 3,
+        "2": 4
+      },
+      "totalPrice": 5487900,
+      "userId": "431a",
+      "emXinhTuoi": true,
+      "pay": false
+    },
+    {
+      "id": "ecf5",
+      "movieId": "8",
+      "showingId": "0bac",
+      "seats": {
+        "SweetBox": 1
+      },
+      "foods": {},
+      "totalPrice": 990000,
+      "userId": "431a",
+      "emXinhTuoi": true,
+      "pay": false
+    },
+    {
+      "id": "4675",
+      "movieId": "3",
+      "showingId": "6c59",
+      "seats": {
+        "VIP": 10,
+        "Classic": 2,
+        "SweetBox": 1
+      },
+      "foods": {
+        "1": 9
+      },
+      "totalPrice": 5010500,
+      "userId": "bcb2",
+      "emXinhTuoi": true,
+      "pay": false
+    },
+    {
+      "id": "da61",
+      "movieId": "3",
+      "showingId": "6c59",
+      "seats": {
+        "Classic": 5
+      },
+      "foods": {},
+      "totalPrice": 1375000,
+      "userId": "431a",
+      "emXinhTuoi": true,
+      "pay": false
+    },
+    {
+      "id": "e8c2",
+      "movieId": "3",
+      "showingId": "6c59",
+      "seats": {},
+      "foods": {},
+      "totalPrice": 550000,
+      "userId": "431a",
+      "emXinhTuoi": true,
+      "pay": false
+    },
+    {
+      "id": "85d2",
+      "movieId": "3",
+      "showingId": "6c59",
+      "seats": {},
+      "foods": {},
+      "totalPrice": 550000,
+      "userId": "431a",
+      "emXinhTuoi": true,
+      "pay": false
+    }
+  ],
+  "showing": [
+    {
+      "id": "3f93",
+      "movieId": "6",
+      "theater": "FER202 Theater",
+      "showDate": "2024-07-19",
+      "showTime": "12:00",
+      "seats": [
+        {
+          "class": "VIP",
+          "totalChairs": 20,
+          "price": 250000
+        },
+        {
+          "class": "Classic",
+          "totalChairs": 15,
+          "price": 150000
+        },
+        {
+          "class": "SweetBox",
+          "totalChairs": 10,
+          "price": 400000
+        }
+      ]
+    },
+    {
+      "id": "4504",
+      "movieId": "3",
+      "theater": "Hola Theater",
+      "showDate": "2024-07-18",
+      "showTime": "20:00",
+      "seats": [
+        {
+          "class": "VIP",
+          "totalChairs": 20,
+          "price": 250000
+        },
+        {
+          "class": "Classic",
+          "totalChairs": 15,
+          "price": 150000
+        },
+        {
+          "class": "SweetBox",
+          "totalChairs": 10,
+          "price": 400000
+        }
+      ]
+    },
+    {
+      "id": "4505",
+      "movieId": "3",
+      "theater": "Hola Theater",
+      "showDate": "2024-07-18",
+      "showTime": "10:00",
+      "seats": [
+        {
+          "class": "VIP",
+          "totalChairs": 20,
+          "price": 250000
+        },
+        {
+          "class": "Classic",
+          "totalChairs": 15,
+          "price": 150000
+        },
+        {
+          "class": "SweetBox",
+          "totalChairs": 10,
+          "price": 400000
+        }
+      ]
+    },
+    {
+      "id": "4507",
+      "movieId": "3",
+      "theater": "Hola Theater",
+      "showDate": "2024-07-18",
+      "showTime": "23:00",
+      "seats": [
+        {
+          "class": "VIP",
+          "totalChairs": 20,
+          "price": 250000
+        },
+        {
+          "class": "Classic",
+          "totalChairs": 15,
+          "price": 150000
+        },
+        {
+          "class": "SweetBox",
+          "totalChairs": 10,
+          "price": 400000
+        }
+      ]
+    },
+    {
+      "id": "e41a",
+      "movieId": "10",
+      "theater": "SDN301 Theater",
+      "showDate": "2024-07-19",
+      "showTime": "12:00",
+      "seats": [
+        {
+          "class": "VIP",
+          "totalChairs": 10,
+          "price": 250000
+        },
+        {
+          "class": "Classic",
+          "totalChairs": 100,
+          "price": 150000
+        },
+        {
+          "class": "SweetBox",
+          "totalChairs": 5,
+          "price": 400000
+        }
+      ]
+    },
+    {
+      "id": "ea51",
+      "movieId": "3",
+      "theater": "FER202 Theater",
+      "showDate": "2024-07-20",
+      "showTime": "10:00",
+      "seats": [
+        {
+          "class": "VIP",
+          "totalChairs": 30,
+          "price": 250000
+        },
+        {
+          "class": "Classic",
+          "totalChairs": 50,
+          "price": 150000
+        },
+        {
+          "class": "SweetBox",
+          "totalChairs": 20,
+          "price": 400000
+        }
+      ]
+    },
+    {
+      "id": "0bac",
+      "movieId": "8",
+      "theater": "SDN301 Theater",
+      "showDate": "2024-07-20",
+      "showTime": "08:00",
+      "seats": [
+        {
+          "class": "VIP",
+          "totalChairs": 10,
+          "price": 250000
+        },
+        {
+          "class": "Classic",
+          "totalChairs": 100,
+          "price": 150000
+        },
+        {
+          "class": "SweetBox",
+          "totalChairs": 5,
+          "price": 400000
+        }
+      ]
+    },
+    {
+      "id": "6c59",
+      "movieId": "3",
+      "theater": "SDN301 Theater",
+      "showDate": "2024-07-19",
+      "showTime": "10:00",
+      "seats": [
+        {
+          "class": "VIP",
+          "totalChairs": 10,
+          "price": 250000
+        },
+        {
+          "class": "Classic",
+          "totalChairs": 100,
+          "price": 150000
+        },
+        {
+          "class": "SweetBox",
+          "totalChairs": 5,
+          "price": 400000
+        }
+      ]
+    }
+  ],
+  "userRequest": [
+    {
+      "id": "7693",
+      "email": "nhat@gmail.com",
+      "requestType": 1,
+      "description": "Unbanfor me sir",
+      "resolver": true
+    },
+    {
+      "id": "33f9",
+      "email": "nhatnlde140307@fpt.edu.vn",
+      "requestType": 2,
+      "description": "QUen Mk",
+      "resolver": true
+    },
+    {
+      "id": "7a5d",
+      "email": "nhatnlde140307@fpt.edu.vn",
+      "requestType": "1",
+      "description": "ban r",
+      "resolver": true
+    },
+    {
+      "id": "386a",
+      "email": "nhat@gmail.com",
+      "requestType": "1",
+      "description": "unban for me sir",
+      "resolver": true
+    },
+    {
+      "resolver": true,
+      "id": "bae1"
+    },
+    {
+      "id": "57a2",
+      "email": "nhatnlde140307@fpt.edu.vn",
+      "requestType": "1",
+      "description": "unban me",
+      "resolver": true
     }
   ]
 }

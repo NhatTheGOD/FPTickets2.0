@@ -11,7 +11,6 @@ import {
   Tooltip,
   Legend
 } from 'chart.js';
-import { format, parseISO } from 'date-fns';
 
 // Register required Chart.js components
 ChartJS.register(
@@ -25,48 +24,53 @@ ChartJS.register(
 
 const TicketSalesChart = () => {
   const [ticketsData, setTicketsData] = useState([]);
+  const [showingsData, setShowingsData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get('http://localhost:9999/tickets');
-        setTicketsData(res.data);
+        const ticketsRes = await axios.get('http://localhost:9999/tickets');
+        const showingsRes = await axios.get('http://localhost:9999/showing');
+        setTicketsData(ticketsRes.data);
+        setShowingsData(showingsRes.data);
       } catch (error) {
-        console.log('Error fetching ticket data:', error);
+        console.log('Error fetching data:', error);
       }
     };
     fetchData();
   }, []);
 
-  // Process the data to get the number of tickets sold per day
-  const processData = (data) => {
-    const salesByDate = {};
+  // Process the data to get the total number of tickets sold by category
+  const processData = (tickets) => {
+    const salesByCategory = { VIP: 0, Classic: 0, SweetBox: 0 };
 
-    data.forEach(ticket => {
-      const date = format(parseISO(ticket.showDate), 'yyyy-MM-dd');
-      if (salesByDate[date]) {
-        salesByDate[date] += ticket.quantity;
-      } else {
-        salesByDate[date] = ticket.quantity;
-      }
+    tickets.forEach(ticket => {
+      salesByCategory.VIP += ticket.seats.VIP || 0;
+      salesByCategory.Classic += ticket.seats.Classic || 0;
+      salesByCategory.SweetBox += ticket.seats.SweetBox || 0;
     });
 
-    return Object.keys(salesByDate).map(date => ({
-      date,
-      tickets: salesByDate[date],
-    }));
+    return salesByCategory;
   };
 
-  const chartData = processData(ticketsData);
+  const totalSales = processData(ticketsData);
 
   const data = {
-    labels: chartData.map(item => item.date),
+    labels: ['VIP Tickets', 'Classic Tickets', 'SweetBox Tickets'],
     datasets: [
       {
         label: 'Tickets Sold',
-        data: chartData.map(item => item.tickets),
-        backgroundColor: 'rgba(75, 192, 192, 0.6)',
-        borderColor: 'rgba(75, 192, 192, 1)',
+        data: [totalSales.VIP, totalSales.Classic, totalSales.SweetBox],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.6)',
+          'rgba(54, 162, 235, 0.6)',
+          'rgba(75, 192, 192, 0.6)',
+        ],
+        borderColor: [
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(75, 192, 192, 1)',
+        ],
         borderWidth: 1,
       },
     ],
@@ -81,9 +85,9 @@ const TicketSalesChart = () => {
   };
 
   return (
-    <Container className='mt-4'>
+    <Container>
       <Box sx={{ boxShadow: 3, borderRadius: 2, p: 2, bgcolor: 'background.paper' }}>
-        <h2>Ticket Sales by Date</h2>
+        <h2>Total Ticket Sales by Category</h2>
         <Bar data={data} options={options} />
       </Box>
     </Container>

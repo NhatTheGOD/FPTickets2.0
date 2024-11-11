@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPT University Academic Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+        .left-column {
+            width: 30%;
+            padding-right: 20px;
+        }
+        .right-column {
+            width: 70%;
+        }
+        .important-notice {
+            background-color: #e1f5fe;
+            border: 1px solid #039be5;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .important-notice h2 {
+            background-color: #4caf50;
+            color: white;
+            padding: 5px;
+        }
+        .important-notice table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .important-notice table, .important-notice th, .important-notice td {
+            border: 1px solid black;
+        }
+        .important-notice th, .important-notice td {
+            padding: 5px;
+            text-align: left;
+        }
+        .academic-info, .feedback, .reports, .others, .regulations {
+            margin-bottom: 20px;
+        }
+        .academic-info h4, .feedback h4, .reports h4, .others h4, .regulations h4 {
+            background-color: #ff9800;
+            color: white;
+            padding: 5px;
+        }
+        .academic-info ul, .feedback ul, .reports ul, .others ul, .regulations ul {
+            list-style: none;
+            padding: 0;
+        }
+        .academic-info ul li, .feedback ul li, .reports ul li, .others ul li, .regulations ul li {
+            margin-bottom: 5px;
+        }
+        .academic-info ul li a, .feedback ul li a, .reports ul li a, .others ul li a, .regulations ul li a {
+            text-decoration: none;
+            color: #039be5;
+        }
+        .academic-info ul li a:hover, .feedback ul li a:hover, .reports ul li a:hover, .others ul li a:hover, .regulations ul li a:hover {
+            text-decoration: underline;
+        }
+        .notification {
+            background-color: #fff3e0;
+            border: 1px solid #ff9800;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .notification .amount {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FPT University Academic Portal</h1>
+        <div>
+            <a href="#"><img src="logo.png" alt="App Store" style="margin-right: 10px;"></a>
+            <a href="#"><img src="logo.png" alt="Google Play"></a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="left-column">
+            <div class="important-notice">
+                <h2>IMPORTANT NOTICE</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Type of procedure | Loại thủ tục</th>
+                            <th>Deadline | Hạn nộp đơn</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1. Changing major (Chuyển ngành)</td>
+                            <td>4 weeks before the new semester (4 tuần trước kỳ mới)</td>
+                        </tr>
+                        <tr>
+                            <td>2. Changing campus (Chuyển cơ sở)</td>
+                            <td>10 days before the new semester (10 ngày trước kỳ mới)</td>
+                        </tr>
+                        <tr>
+                            <td>3. Rejoin (Nhập học trở lại)</td>
+                            <td>10 days before the new semester (10 ngày trước kỳ mới)</td>
+                        </tr>
+                        <tr>
+                            <td>4. Suspend one semester (Báo lưu học kỳ)</td>
+                            <td>1 week before the new semester (1 tuần trước kỳ mới)</td>
+                        </tr>
+                        <tr>
+                            <td>5. Suspend one semester to take repeated course (Tạm ngưng một học kỳ để học lại)</td>
+                            <td>1 week before the new semester (1 tuần trước kỳ mới)</td>
+                        </tr>
+                        <tr>
+                            <td>6. Suspend subject (Tạm ngừng môn)</td>
+                            <td>Before course registration</td>
+                        </tr>
+                        <tr>
+                            <td>7. Register to repeat a course (Đăng ký học lại)</td>
+                            <td>Before course registration</td>
+                        </tr>
+                        <tr>
+                            <td>8. Register extra courses (Đăng ký học thêm)</td>
+                            <td>Before course registration</td>
+                        </tr>
+                        <tr>
+                            <td>9. Register to improve mark (Đăng ký học cải thiện)</td>
+                            <td>Before course registration</td>
+                        </tr>
+                        <tr>
+                            <td>10. Move out class (Chuyển lớp)</td>
+                            <td>Before course registration</td>
+                        </tr>
+                        <tr>
+                            <td>11. Request a drop out (Thôi học tự nguyện)</td>
+                            <td>Before course registration</td>
+                        </tr>
+                        <tr>
+                            <td>12. Retake to improve mark (Thi cải thiện)</td>
+                            <td>12 hours before the final exam result (12h trước khi thi lại)</td>
+                        </tr>
+                        <tr>
+                            <td>13. Re – Examination (Phúc tra)</td>
+                            <td>3 days after the examination result public (3 ngày sau ngày công bố kết quả)</td>
+                        </tr>
+                        <tr>
+                            <td>14. Free of attendance (Miễn điểm danh)</td>
+                            <td>Before starting the new semester (Trước khi học kỳ mới bắt đầu)</td>
+                        </tr>
+                        <tr>
+                            <td>15. Pay specialized tuition (Nộp học phí chuyên ngành)</td>
+                            <td>5 working days before the new semester (5 ngày trước kỳ học kỳ mới không tính T7, CN)</td>
+                        </tr>
+                        <tr>
+                            <td>16. Pay preparation English tuition (Nộp học phí Tiếng Anh dự bị)</td>
+                            <td>5 working days before the new course (5 ngày trước khóa học không tính T7, CN)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="right-column">
+            <div class="notification">
+                <p class="amount">Học phí phải nộp: 31,230,000 - Hạn nộp học phí đến ngày 28/07/2024</p>
+                <p class="amount">Account balance (Số dư tài khoản): 0 VNĐ (Số dư chưa đủ để thanh toán các khoản nộp)</p>
+                <p>Nếu bạn đã nộp các khoản phí này vui lòng bỏ qua.</p>
+                <p>Thông báo này sẽ không hiển thị nữa sau khi hệ thống thực hiện quét trừ tiền các khoản phải thu trước khi học kỳ bắt đầu</p>
+            </div>
+            <div class="academic-info">
+                <h4>Academic Information</h4>
+                <div class="section">
+                    <ul>
+                        <li><a href="#">Suspend one semester to take repeated course</a></li>
+                        <li><a href="#">Cancel</a></li>
+                        <li><a href="#">Suspend one semester</a></li>
+                        <li><a href="#">Move out class</a></li>
+                        <li><a href="#">Register extra courses</a></li>
+                        <li><a href="#">Register to improve mark</a></li>
+                        <li><a href="#">Register to repeat a course</a></li>
+                        <li><a href="#">Register Free Elective Courses</a></li>
+                        <li><a href="#">Send Application (Gửi đơn)</a></li>
+                        <li><a href="#">Xin xác nhận sinh viên</a></li>
+                        <li><a href="#">Choose paid Interns</a></li>
+                        <li><a href="#">Yêu cầu điều chỉnh lớp viên xin</a></li>
+                        <li><a href="#">Sinh viên điểm danh bằng mã QR</a></li>
+                        <li><a href="#">Wishlist Course</a></li>
+                        <li><a href="#">Đăng ký học</a></li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h4>Information Access (Tra cứu thông tin)</h4>
+                    <ul>
+                        <li><a href="#">Tuition fee per course</a></li>
+                        <li><a href="#">Weekly timetable</a></li>
+                        <li><a href="#">View exam schedule</a></li>
+                        <li><a href="#">View Syllabus</a></li>
+                        <li><a href="#">EduNext student guideline</a></li>
+                        <li><a href="#">Help/ITs</a></li>
+                        <li><a href="#">Tài liệu hướng dẫn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="feedback">
+                <h4>Feedback (Ý kiến)</h4>
+                <ul>
+                    <li><a href="#">Feedback about teaching</a></li>
+                </ul>
+            </div>
+            <div class="reports">
+                <h4>Reports (Báo cáo)</h4>
+                <ul>
+                    <li><a href="#">Attendance report</a></li>
+                    <li><a href="#">Mark Report</a></li>
+                    <li><a href="#">Academic Transcript</a></li>
+                    <li><a href="#">Curriculum</a></li>
+                    <li><a href="#">Transaction history</a></li>
+                </ul>
+            </div>
+            <div class="others">
+                <h4>Others (Khác)</h4>
+                <ul>
+                    <li><a href="#">Student Profile Update Profile</a></li>
+                    <li><a href="#">View semester, room</a></li>
+                    <li><a href="#">Gọi điện cho máy in</a></li>
+                    <li><a href="#">Report điện phòng học</a></li>
+                    <li><a href="#">How to access eBook on VitalSource platform</a></li>
+                    <li><a href="#">Download EOSClient</a></li>
+                </ul>
+            </div>
+            <div class="regulations">
+                <h4>Regulations (Các quy định)</h4>
+                <ul>
+                    <li><a href="#">Regulations...</a></li>
+                    <li><a href="#">Dormitory regulations (Nội quy KTX Hà Nội)</a></li>
+                    <li><a href="#">Dormitory regulations (Nội quy KTX Cần Thơ)</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

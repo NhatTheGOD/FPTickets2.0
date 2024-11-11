@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Button, Container, Nav, NavItem } from 'react-bootstrap';
+import { Container, List, ListItem, ListItemIcon, ListItemText, Typography, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
-import { FaHome, FaFilm, FaLandmark, FaUsers, FaPizzaSlice, FaTags } from 'react-icons/fa';
+import { FaHome, FaFilm, FaLandmark, FaUsers, FaPizzaSlice } from 'react-icons/fa';
 
 const Sidebar = () => {
   const [activeTab, setActiveTab] = useState('home');
@@ -16,63 +16,33 @@ const Sidebar = () => {
   };
 
   return (
-    <Container fluid>
-      <h1>Welcome Admin</h1>
-      <img style={{width : '100px'}} src='/images/logo2.png' alt='logo'/>
-      <hr />
-      <Nav className="flex-column" variant="pills" activeKey={activeTab}>
-        <NavItem>
-          <Nav.Link
-            as={Link}
-            to="/"
-            eventKey="home"
-            onClick={() => handleSetActiveTab('home')}
-          >
-            <FaHome /> Home
-          </Nav.Link>
-        </NavItem>
-        <NavItem>
-          <Nav.Link
-            as={Link}
-            to="/admin/movies"
-            eventKey="movies"
-            onClick={() => handleSetActiveTab('movies')}
-          >
-            <FaFilm /> Movies
-          </Nav.Link>
-        </NavItem>
-        <NavItem>
-          <Nav.Link
-            as={Link}
-            to="/admin/theaters"
-            eventKey="theaters"
-            onClick={() => handleSetActiveTab('theaters')}
-          >
-            <FaLandmark /> Theaters
-          </Nav.Link>
-        </NavItem>
-        <NavItem>
-          <Nav.Link
-            as={Link}
-            to="/admin/users"
-            eventKey="users"
-            onClick={() => handleSetActiveTab('users')}
-          >
-            <FaUsers /> Users
-          </Nav.Link>
-        </NavItem>
-        <NavItem>
-          <Nav.Link
-            as={Link}
-            to="/admin/foods"
-            eventKey="foods"
-            onClick={() => handleSetActiveTab('foods')}
-          >
-            <FaPizzaSlice /> Foods
-          </Nav.Link>
-        </NavItem>
-        <Button onClick={handleLogout} variant='danger' className="mt-3">Log Out</Button>
-      </Nav>
+    <Container maxWidth="xs" sx={{ bgcolor: 'background.paper', padding: '20px', boxShadow: 3, borderRadius: 1 }}>
+      <Typography variant="h4" gutterBottom>Welcome Admin</Typography>
+      <img style={{ width: '100px' }} src='/images/logo2.png' alt='logo' />
+      <hr style={{ margin: '20px 0' }} />
+      <List component="nav" aria-label="main navigation">
+        <ListItem button component={Link} to="/" selected={activeTab === 'home'} onClick={() => handleSetActiveTab('home')}>
+          <ListItemIcon><FaHome /></ListItemIcon>
+          <ListItemText primary="Home" />
+        </ListItem>
+        <ListItem button component={Link} to="/admin/movies" selected={activeTab === 'movies'} onClick={() => handleSetActiveTab('movies')}>
+          <ListItemIcon><FaFilm /></ListItemIcon>
+          <ListItemText primary="Movies" />
+        </ListItem>
+        <ListItem button component={Link} to="/admin/theaters" selected={activeTab === 'theaters'} onClick={() => handleSetActiveTab('theaters')}>
+          <ListItemIcon><FaLandmark /></ListItemIcon>
+          <ListItemText primary="Theaters" />
+        </ListItem>
+        <ListItem button component={Link} to="/admin/users" selected={activeTab === 'users'} onClick={() => handleSetActiveTab('users')}>
+          <ListItemIcon><FaUsers /></ListItemIcon>
+          <ListItemText primary="Users" />
+        </ListItem>
+        <ListItem button component={Link} to="/admin/foods" selected={activeTab === 'foods'} onClick={() => handleSetActiveTab('foods')}>
+          <ListItemIcon><FaPizzaSlice /></ListItemIcon>
+          <ListItemText primary="Foods" />
+        </ListItem>
+      </List>
+      <Button onClick={handleLogout} variant='contained' color='error' fullWidth style={{ marginTop: '20px' }}>Log Out</Button>
     </Container>
   );
 };
